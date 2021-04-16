@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfollowmelib.a  CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.o CMakeFiles/followmelib.dir/src/lib/configurator.cpp.o CMakeFiles/followmelib.dir/src/lib/interface.cpp.o CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.o CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o CMakeFiles/followmelib.dir/src/lib/utils.cpp.o
+/usr/bin/ranlib libfollowmelib.a
