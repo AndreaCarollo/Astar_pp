@@ -5,21 +5,28 @@
 #include "./lib/rs_stream.h"
 #include "./lib/PathPlanning.h"
 
+#include <sstream>
+#include <string>
+#include <ios>
+
 using namespace std;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~ main ~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 int main(int argc, char **argv)
 {
-    cv::Point3f target_point3D = cv::Point3f(0.0, 0.0, 1.0);
+    cv::Point3f target_point3D = cv::Point3f(0.0, 0.0, 6.0);
     // ~~~~~~~~~~~~~~~~~~~ CONFIGURATION FILE ~~~~~~~~~~~~~~~~~~~ //
 
     // Create the configurator object and parse conf.ini file
     ConfigReader *p = ConfigReader::getInstance();
     p->parseFile("../config.ini");
+
+    cv::Size INTERFACE_SIZE;
+    p->getValue("INTERFACE_SIZE", INTERFACE_SIZE);
+    std::cout << INTERFACE_SIZE.height << " | " << INTERFACE_SIZE.width << std::endl;
 
     int IR_WIDTH = 640;
     int IR_HEIGHT = 480;
@@ -57,14 +64,18 @@ int main(int argc, char **argv)
 
     // Initialize the Path Planning stream
     PathPlanning plan = PathPlanning(p);
-    
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_in (new pcl::PointCloud<pcl::PointXYZ>);
+
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_in(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::io::loadPCDFile("../test_pcd_4.pcd", *cloud_in);
+
+    bool export_path = true;
+    std::ofstream file_out("../path_wrt_world.txt");
 
     // LOOP
     int contatore = 0;
     while (!viewer->wasStopped()) // The visualizer stops, stop the code
     {
+        contatore++;
 
         // // ~~~~~~~~~~~~~~~ Path Planning Part ~~~~~~~~~~~~~~~~~~~~ //
 
@@ -72,6 +83,22 @@ int main(int argc, char **argv)
 
         // Update the Path Planning class -> all others operations are done inside the update function
         plan.update(&target_point3D, cloud_in);
+
+        plan.smooth_path();
+        plan.path_wrt_world();
+        if (export_path & contatore > 10)
+        {
+            std::cout << "writing to file" << std::endl;
+
+            for (int i = 0; i < plan.path_simplified_wrt_world.size(); i++)
+            {
+                /* code */
+                file_out << plan.path_simplified_wrt_world[i].x << ","
+                         << plan.path_simplified_wrt_world[i].y << std::endl;
+            }
+            export_path = false;
+            std::cout << "end writing" << std::endl;
+        }
 
         auto stop_pathpl = std::chrono::high_resolution_clock::now();
         auto duration_pathpl = std::chrono::duration_cast<std::chrono::microseconds>(stop_pathpl - start_pathpl);
@@ -106,6 +133,10 @@ int main(int argc, char **argv)
         auto duration_visu = std::chrono::duration_cast<std::chrono::microseconds>(stop_visu - start_visu);
 
         durations_visu.push_back((float)duration_visu.count() / 1000);
+
+        plan.interface->put_simplified_path(plan.path_simplified);
+        cv::imshow("intersection map", plan.interface->intersection_map_path);
+
         cv::waitKey(10);
     }
 

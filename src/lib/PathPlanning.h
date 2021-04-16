@@ -2,7 +2,7 @@
 #ifndef PATHPLANNING
 #define PATHPLANNING
 
-#include "followme.h"
+// #include "followme.h"
 #include "rs_stream.h"
 #include "segmentation.h"
 #include "configurator.h"
@@ -39,11 +39,19 @@ class PathPlanning{
         class Plane* plane;
         pcl::PointXYZ refPnt;
 
+        std::vector<cv::Point2i> path_points;
+        std::vector<cv::Point2i> path_simplified;
+        std::vector<cv::Point2f> path_simplified_wrt_world;
+
         PathPlanning(ConfigReader *p);
         void update(cv::Point* targetPoint2D, PntCld::Ptr PointCloud, cv::Size cvFrameSize);
         void update(cv::Point* targetPoint2D, Stream* stream);
         void update(cv::Point3f* targetPoint3D, PntCld::Ptr PointCloud);
+        void extract_planned_path();
 
+        void simplify_path();
+        void smooth_path();
+        void path_wrt_world();
         
     private:
 
@@ -56,6 +64,8 @@ class PathPlanning{
         float distance_robot_target, distance_threshold;
 
         pcl::PointXYZ tmpPnt;
+
+        int number_smooth = 10;
         
         bool path_planning;
 
@@ -66,6 +76,9 @@ class PathPlanning{
         void obstacle_finding(PntCld::Ptr cloud);
         void A_star();
         void neighbors(AStar_cell* current);
+
+
+        bool check_intersection();
 
 };
 

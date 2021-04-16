@@ -1,7 +1,7 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
 
-#include "followme.h"
+// #include "followme.h"
 #include "configurator.h"
 #include "PathPlanning.h"
 
@@ -16,9 +16,14 @@ class Interface{
     public:
         static Interface* interfInstance;
         cv::Mat interface;
+        cv::Mat intersection_map;
+        cv::Mat intersection_map_path;
 
         static Interface* getInstance(ConfigReader *p);
         void update(class PathPlanning *plan);   // gets either the path or the arrow coords
+
+        void put_simplified_path(std::vector<cv::Point2i> path_list_point);
+        void put_simplified_path(cv::Point2i ptA, cv::Point2i ptB);
 
     private:
 
@@ -43,6 +48,8 @@ class Interface{
         void put_obstacle(int p_col, int p_row);
         void put_references();
         void clean();
+
+
 };
 
 #endif

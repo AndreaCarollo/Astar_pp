@@ -2,10 +2,29 @@
 #ifndef CONFIGURATOR_H
 #define CONFIGURATOR_H
 
-#include "followme.h"
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/dnn.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core.hpp>
+
+
 #include <map>
 #include <fstream>
 #include <algorithm>
+#include <iostream>
+#include <vector>
+
+// Realsense Library
+#include <librealsense2/rs.hpp>
+#include <librealsense2/rsutil.h>
+#include <librealsense2/hpp/rs_frame.hpp>
+
+#include <tbb/parallel_invoke.h>
+
+#include <eigen3/Eigen/Eigen>
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
