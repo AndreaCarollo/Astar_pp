@@ -155,6 +155,12 @@ configurator.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.h
 ./lib/PathPlanning.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/PathPlanning.h
+sstream
+-
+string
+-
+ios
+-
 
 /opt/intel/openvino_2020.3.194/inference_engine/external/tbb/include/tbb/atomic.h
 internal/_deprecated_header_message_guard.h

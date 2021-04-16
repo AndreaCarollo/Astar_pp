@@ -20,10 +20,6 @@ configurator.h
 interface.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/interface.h
 
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.cpp
-configurator.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.h
-
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.h
 opencv2/opencv.hpp
 -
@@ -134,35 +130,15 @@ configurator.h
 PathPlanning.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/PathPlanning.h
 
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.cpp
-./rs_stream.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.h
-
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.h
 ./followme.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/followme.h
 ./configurator.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.h
 
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/segmentation.cpp
-segmentation.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/segmentation.h
-
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/segmentation.h
 followme.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/followme.h
-configurator.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.h
-
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/utils.cpp
-utils.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/utils.h
-
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/utils.h
-followme.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/followme.h
-rs_stream.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.h
 configurator.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.h
 
