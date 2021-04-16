@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andrea/Desktop/PathPlanning_demo_2
+CMAKE_SOURCE_DIR = /home/andrea/Documents/Tesi/Code/C++/Astar_pp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andrea/Desktop/PathPlanning_demo_2/build
+CMAKE_BINARY_DIR = /home/andrea/Documents/Tesi/Code/C++/Astar_pp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/followmelib.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/followmelib.dir/flags.make
 
 CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.o: CMakeFiles/followmelib.dir/flags.make
 CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.o: ../src/lib/PathPlanning.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.o -c /home/andrea/Desktop/PathPlanning_demo_2/src/lib/PathPlanning.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.o -c /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/PathPlanning.cpp
 
 CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Desktop/PathPlanning_demo_2/src/lib/PathPlanning.cpp > CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/PathPlanning.cpp > CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.i
 
 CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Desktop/PathPlanning_demo_2/src/lib/PathPlanning.cpp -o CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/PathPlanning.cpp -o CMakeFiles/followmelib.dir/src/lib/PathPlanning.cpp.s
 
 CMakeFiles/followmelib.dir/src/lib/configurator.cpp.o: CMakeFiles/followmelib.dir/flags.make
 CMakeFiles/followmelib.dir/src/lib/configurator.cpp.o: ../src/lib/configurator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/followmelib.dir/src/lib/configurator.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/configurator.cpp.o -c /home/andrea/Desktop/PathPlanning_demo_2/src/lib/configurator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/followmelib.dir/src/lib/configurator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/configurator.cpp.o -c /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.cpp
 
 CMakeFiles/followmelib.dir/src/lib/configurator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/followmelib.dir/src/lib/configurator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Desktop/PathPlanning_demo_2/src/lib/configurator.cpp > CMakeFiles/followmelib.dir/src/lib/configurator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.cpp > CMakeFiles/followmelib.dir/src/lib/configurator.cpp.i
 
 CMakeFiles/followmelib.dir/src/lib/configurator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/followmelib.dir/src/lib/configurator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Desktop/PathPlanning_demo_2/src/lib/configurator.cpp -o CMakeFiles/followmelib.dir/src/lib/configurator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.cpp -o CMakeFiles/followmelib.dir/src/lib/configurator.cpp.s
 
 CMakeFiles/followmelib.dir/src/lib/interface.cpp.o: CMakeFiles/followmelib.dir/flags.make
 CMakeFiles/followmelib.dir/src/lib/interface.cpp.o: ../src/lib/interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/followmelib.dir/src/lib/interface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/interface.cpp.o -c /home/andrea/Desktop/PathPlanning_demo_2/src/lib/interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/followmelib.dir/src/lib/interface.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/interface.cpp.o -c /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/interface.cpp
 
 CMakeFiles/followmelib.dir/src/lib/interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/followmelib.dir/src/lib/interface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Desktop/PathPlanning_demo_2/src/lib/interface.cpp > CMakeFiles/followmelib.dir/src/lib/interface.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/interface.cpp > CMakeFiles/followmelib.dir/src/lib/interface.cpp.i
 
 CMakeFiles/followmelib.dir/src/lib/interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/followmelib.dir/src/lib/interface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Desktop/PathPlanning_demo_2/src/lib/interface.cpp -o CMakeFiles/followmelib.dir/src/lib/interface.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/interface.cpp -o CMakeFiles/followmelib.dir/src/lib/interface.cpp.s
 
 CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.o: CMakeFiles/followmelib.dir/flags.make
 CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.o: ../src/lib/rs_stream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.o -c /home/andrea/Desktop/PathPlanning_demo_2/src/lib/rs_stream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.o -c /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.cpp
 
 CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Desktop/PathPlanning_demo_2/src/lib/rs_stream.cpp > CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.cpp > CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.i
 
 CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Desktop/PathPlanning_demo_2/src/lib/rs_stream.cpp -o CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/rs_stream.cpp -o CMakeFiles/followmelib.dir/src/lib/rs_stream.cpp.s
 
 CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o: CMakeFiles/followmelib.dir/flags.make
 CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o: ../src/lib/segmentation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o -c /home/andrea/Desktop/PathPlanning_demo_2/src/lib/segmentation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o -c /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/segmentation.cpp
 
 CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Desktop/PathPlanning_demo_2/src/lib/segmentation.cpp > CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/segmentation.cpp > CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.i
 
 CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Desktop/PathPlanning_demo_2/src/lib/segmentation.cpp -o CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/segmentation.cpp -o CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.s
 
 CMakeFiles/followmelib.dir/src/lib/utils.cpp.o: CMakeFiles/followmelib.dir/flags.make
 CMakeFiles/followmelib.dir/src/lib/utils.cpp.o: ../src/lib/utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/followmelib.dir/src/lib/utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/utils.cpp.o -c /home/andrea/Desktop/PathPlanning_demo_2/src/lib/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/followmelib.dir/src/lib/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/followmelib.dir/src/lib/utils.cpp.o -c /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/utils.cpp
 
 CMakeFiles/followmelib.dir/src/lib/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/followmelib.dir/src/lib/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Desktop/PathPlanning_demo_2/src/lib/utils.cpp > CMakeFiles/followmelib.dir/src/lib/utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/utils.cpp > CMakeFiles/followmelib.dir/src/lib/utils.cpp.i
 
 CMakeFiles/followmelib.dir/src/lib/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/followmelib.dir/src/lib/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Desktop/PathPlanning_demo_2/src/lib/utils.cpp -o CMakeFiles/followmelib.dir/src/lib/utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/utils.cpp -o CMakeFiles/followmelib.dir/src/lib/utils.cpp.s
 
 # Object files for target followmelib
 followmelib_OBJECTS = \
@@ -155,7 +155,7 @@ libfollowmelib.a: CMakeFiles/followmelib.dir/src/lib/segmentation.cpp.o
 libfollowmelib.a: CMakeFiles/followmelib.dir/src/lib/utils.cpp.o
 libfollowmelib.a: CMakeFiles/followmelib.dir/build.make
 libfollowmelib.a: CMakeFiles/followmelib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libfollowmelib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libfollowmelib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/followmelib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/followmelib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -169,6 +169,6 @@ CMakeFiles/followmelib.dir/clean:
 .PHONY : CMakeFiles/followmelib.dir/clean
 
 CMakeFiles/followmelib.dir/depend:
-	cd /home/andrea/Desktop/PathPlanning_demo_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andrea/Desktop/PathPlanning_demo_2 /home/andrea/Desktop/PathPlanning_demo_2 /home/andrea/Desktop/PathPlanning_demo_2/build /home/andrea/Desktop/PathPlanning_demo_2/build /home/andrea/Desktop/PathPlanning_demo_2/build/CMakeFiles/followmelib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andrea/Documents/Tesi/Code/C++/Astar_pp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andrea/Documents/Tesi/Code/C++/Astar_pp /home/andrea/Documents/Tesi/Code/C++/Astar_pp /home/andrea/Documents/Tesi/Code/C++/Astar_pp/build /home/andrea/Documents/Tesi/Code/C++/Astar_pp/build /home/andrea/Documents/Tesi/Code/C++/Astar_pp/build/CMakeFiles/followmelib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/followmelib.dir/depend
 
