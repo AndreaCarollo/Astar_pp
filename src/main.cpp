@@ -112,19 +112,19 @@ int main(int argc, char **argv)
         // // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
         // // Target point choosing (since the state machine there aren't)
-        y_rel = 0.5;
-        x_rel = 0.5;
-        y_cv = stream.color_frame.rows * y_rel;
-        x_cv = stream.color_frame.cols * x_rel;
-        target_point = cv::Point(x_cv, y_cv);
-        float z_ = stream.frames->get_depth_frame().get_distance(x_cv, y_cv);
-        float ref_pt_cloud[3];
-        float pixel_cv[2];
-        pixel_cv[0] = x_cv;
-        pixel_cv[1] = y_cv;
-        rs2_deproject_pixel_to_point(ref_pt_cloud, &intrinsic_color, pixel_cv, z_);
+        // y_rel = 0.5;
+        // x_rel = 0.5;
+        // y_cv = stream.color_frame.rows * y_rel;
+        // x_cv = stream.color_frame.cols * x_rel;
+        // target_point = cv::Point(x_cv, y_cv);
+        // float z_ = stream.frames->get_depth_frame().get_distance(x_cv, y_cv);
+        // float ref_pt_cloud[3];
+        // float pixel_cv[2];
+        // pixel_cv[0] = x_cv;
+        // pixel_cv[1] = y_cv;
+        // rs2_deproject_pixel_to_point(ref_pt_cloud, &intrinsic_color, pixel_cv, z_);
 
-        target_point3D = cv::Point3f(ref_pt_cloud[0], ref_pt_cloud[1], ref_pt_cloud[2]);
+        // target_point3D = cv::Point3f(ref_pt_cloud[0], ref_pt_cloud[1], ref_pt_cloud[2]);
 
         // A rectangle is put on the image as a marker
         cv::rectangle(stream.color_frame, cv::Point(x_cv - 5, y_cv - 5), cv::Point(x_cv + 5, y_cv + 5), cv::Scalar(0, 0, 255), 5);
@@ -134,7 +134,20 @@ int main(int argc, char **argv)
         auto start_pathpl = std::chrono::high_resolution_clock::now();
 
         // Update the Path Planning class -> all others operations are done inside the update function
+        target_point3D = cv::Point3f(0, 1, 3);
+
         plan.update(&target_point3D, stream.cloud);
+        plan.smooth_path();
+        plan.path_wrt_world();
+        plan.interface->put_simplified_path(plan.path_simplified);
+        std::cout << "path simplified size " << plan.path_simplified.size() << std::endl;
+        std::cout << "world path, size" << plan.path_simplified_wrt_world.size() << std::endl;
+        for (int i = 0; i < plan.path_simplified_wrt_world.size(); i++)
+        {
+            /* code */
+            std::cout << plan.path_simplified_wrt_world[i].x << ","
+                      << plan.path_simplified_wrt_world[i].y << std::endl;
+        }
 
         auto stop_pathpl = std::chrono::high_resolution_clock::now();
         auto duration_pathpl = std::chrono::duration_cast<std::chrono::microseconds>(stop_pathpl - start_pathpl);
@@ -158,11 +171,13 @@ int main(int argc, char **argv)
 
         cv::imshow("Image", stream.color_frame);
         cv::imshow("Interface", plan.interface->interface);
+        cv::imshow("Interface path smooth", plan.interface->intersection_map_path);
         viewer->spinOnce(100); // wait for some microseconds, makes the viewer interactive
 
-        int k  = cv::waitKey(0);
-        if(k == 27){
-            pcl::io::savePCDFileASCII("../test_pcd_" + to_string(contatore) +".pcd", (*stream.cloud));
+        int k = cv::waitKey(10);
+        if (k == 27)
+        {
+            pcl::io::savePCDFileASCII("../test_pcd_" + to_string(contatore) + ".pcd", (*stream.cloud));
         }
 
         // Remove the point cloud from the viewer

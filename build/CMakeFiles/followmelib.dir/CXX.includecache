@@ -120,10 +120,6 @@ pcl/segmentation/sac_segmentation.h
 pcl/filters/extract_indices.h
 -
 
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/interface.cpp
-interface.h
-/home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/interface.h
-
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/interface.h
 configurator.h
 /home/andrea/Documents/Tesi/Code/C++/Astar_pp/src/lib/configurator.h

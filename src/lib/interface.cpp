@@ -73,7 +73,7 @@ void Interface::put_path(std::vector<std::vector<struct AStar_cell>> &grid, Posi
     // the starting point where the come_from pointer is NULL
     tmp_cell = &grid[target.row][target.col];
 
-    do
+    while (tmp_cell != NULL)
     {
         int x_rect = tmp_cell->cell.col * scale;
         int y_rect = tmp_cell->cell.row * scale;
@@ -84,7 +84,7 @@ void Interface::put_path(std::vector<std::vector<struct AStar_cell>> &grid, Posi
 
         tmp_cell = tmp_cell->came_from;
 
-    } while (tmp_cell != NULL);
+    }
 }
 
 void Interface::put_arrow()
@@ -148,10 +148,10 @@ void Interface::put_references()
 void Interface::clean()
 {
     // Clean the interface matrix
-    interface.release();
+    // interface.release();
     interface = cv::Mat(interface_size, CV_8UC3, backgroundColor);
 
-    intersection_map.release();
+    // intersection_map.release();
     intersection_map = cv::Mat(interface_size, CV_8UC1, cv::Scalar(0));
 }
 
@@ -172,7 +172,7 @@ void Interface::put_simplified_path(cv::Point2i ptA, cv::Point2i ptB)
     intersection_map_path = cv::Mat(interface_size, CV_8UC1, cv::Scalar(0));
     // Starting from the target point follow the path until
     // the starting point where the come_from pointer is NULL
-    cv::line(intersection_map_path, ptA, ptB, cv::Scalar(50), scale / 2);
+    cv::line(intersection_map_path, ptA, ptB, cv::Scalar(50), scale/2 );
     
     cv::add(intersection_map_path,intersection_map,intersection_map_path);
 }

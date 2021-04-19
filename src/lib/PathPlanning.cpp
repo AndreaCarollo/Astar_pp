@@ -74,7 +74,7 @@ void PathPlanning::update(cv::Point3f *targetPoint3D, PntCld::Ptr PointCloud)
     // update the interface
 
     plane->update(PointCloud);
-    // rs2_deproject_pixel_to_point(pt_cloud,this->intrinsic,pt_pixel,);
+    // // rs2_deproject_pixel_to_point(pt_cloud,this->intrinsic,pt_pixel,);
     refPnt = pcl::PointXYZ(targetPoint3D->x, targetPoint3D->y, targetPoint3D->z);
     refPnt = pcl::transformPoint(refPnt, plane->transf_mtx);
 
@@ -223,26 +223,55 @@ void PathPlanning::extract_planned_path()
         tmp_cell = tmp_cell->came_from;
 
     } while (tmp_cell != NULL);
+    reverse(path_points.begin(),path_points.end());
 }
 
 void PathPlanning::simplify_path()
 {
     int start = 0;
-    int end = 0;
+    int end = 1;
+    // int i = start;
     path_simplified.clear();
-    path_simplified.push_back(path_points[0]);
-    do
+    std::cout << "new path, size " << path_points.size() << std::endl;
+    // if (path_points.size() > 0)
+    // {
+    //     path_simplified.push_back(path_points[start]);
+    //     do
+    //     {
+    //         for (i = start; i < path_points.size(); i++)
+    //         {
+    //             std::cout << i << std::endl;
+    //             this->interface->put_simplified_path(path_points[start], path_points[i]);
+    //             if (!check_intersection())
+    //             {
+    //                 path_simplified.push_back(path_points[i - 1]);
+    //                 start = i - 1;
+    //                 i = path_points.size() + 1;
+    //             }
+    //         }
+
+    //     } while (i < path_points.size());
+    //     // path_simplified.push_back(*path_points.end());
+    // }
+
+    if (path_points.size() > 0)
     {
+        // reverse(path_points.begin(),path_points.end());
+        path_simplified.push_back(path_points[start]);
         do
         {
-            end++;
-            this->interface->put_simplified_path(path_points[start], path_points[end]);
+            do
+            {
+                end++;
+                this->interface->put_simplified_path(path_points[start], path_points[end]);
 
-        } while (check_intersection() & end != path_points.size());
-        start = end - 1;
-        path_simplified.push_back(path_points[start]);
+            } while (check_intersection() & end < path_points.size());
+            start = end - 1;
+            path_simplified.push_back(path_points[start]);
 
-    } while (end != path_points.size());
+        } while (end < path_points.size());
+        // path_simplified.push_back(*path_points.end());
+    }
 }
 
 bool PathPlanning::check_intersection()
@@ -258,7 +287,8 @@ bool PathPlanning::check_intersection()
 void PathPlanning::smooth_path()
 {
     this->extract_planned_path();
-    for (int i = 0; i < number_smooth; i++)
+    // number_smooth
+    for (int i = 0; i < 3; i++)
     {
         /* code */
         this->simplify_path();
@@ -268,16 +298,17 @@ void PathPlanning::smooth_path()
     }
 }
 
-void PathPlanning::path_wrt_world(){
+void PathPlanning::path_wrt_world()
+{
     path_simplified_wrt_world.clear();
-    std::reverse(path_simplified.begin(),path_simplified.end()); 
+    std::reverse(path_simplified.begin(), path_simplified.end());
     cv::Point2f tmp_point;
-    for ( int i = 0; i < path_simplified.size(); i++){
+    for (int i = 0; i < path_simplified.size(); i++)
+    {
         auto pp = cv::Point2f(path_simplified[i].x - path_simplified[0].x, -path_simplified[i].y + path_simplified[0].y);
-                    //- (cv::Point2f)path_simplified[i]/(float)this->interface->scale) ;// (float)this->scale;
-        tmp_point = (pp/(float)this->interface->scale)/(float)this->scale;
+        //- (cv::Point2f)path_simplified[i]/(float)this->interface->scale) ;// (float)this->scale;
+        tmp_point = (pp / (float)this->interface->scale) / (float)this->scale;
 
         path_simplified_wrt_world.push_back(tmp_point);
     }
-
 }

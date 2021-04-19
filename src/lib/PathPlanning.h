@@ -65,7 +65,7 @@ class PathPlanning{
 
         pcl::PointXYZ tmpPnt;
 
-        int number_smooth = 10;
+        int number_smooth = 1;
         
         bool path_planning;
 
